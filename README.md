@@ -52,7 +52,7 @@ $ npm start
 A minimal but useful development logger is also included.
 
 You can override the default port `3000` with the `PORT` environment variable. But if all the above steps
-succeeded, now your server is ready to accept connections at `http://http://0.0.0.0:3000/`.
+succeeded, now your server is ready to accept connections at `http://0.0.0.0:3000/`.
 
 If you're planning to actively develop the project there is also
 
