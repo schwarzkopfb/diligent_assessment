@@ -1,8 +1,8 @@
 # diligent_assessment
 
-This is my submission to a competition to work at Diligent as a Senior Software Developer.
+This is my submission to a competition to work at Diligent as a Senior Software Engineer.
 
-Try it out live! Deployed here: https://diligent-assessment.schwarzkopfb.codes/
+Try it out live! Deployed here: https://diligent-assessment.schwarzkopfb.codes<br/>
 Task description: https://github.com/dil-ajanek/tech_assessment/blob/main/README.md
 
 ## Overview
@@ -36,7 +36,7 @@ Then build both the server and the client code:
 $ npm run build
 ```
 
-this will emit the compiled client and server code into the `dist` folder.
+this will emit the transpiled and bundled client and server code into the `dist` folder.
 
 To be able to connect to The Movie Database, you'll need an access token for their API
 and also a PostgreSQL database should be available somewhere.
