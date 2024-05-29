@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/server",
+    "target": "ES2019",
+    "lib": ["dom"],
+    "strict": true
+  },
+  "include": ["src/server/**/*"]
+}

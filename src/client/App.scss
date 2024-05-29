@@ -1,0 +1,34 @@
+@import "~bootstrap/scss/bootstrap";
+
+// Target blank icon
+a[target="_blank"]:after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
+}
+
+@include media-breakpoint-up(sm) {
+  .result-card {
+    min-height: 530px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .result-card {
+    min-height: 445px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .result-card {
+    min-height: 550px;
+  }
+}
+
+p.card-text {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}

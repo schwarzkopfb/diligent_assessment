@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Movie {
+  id                Int                 @id
+  original_language String
+  original_title    String
+  overview          String
+  popularity        Float
+  poster_path       String?
+  release_date      String
+  title             String
+  vote_average      Float
+  vote_count        Int
+  query             MovieSearchResult[]
+}
+
+model MovieSearch {
+  term            String
+  results         MovieSearchResult[]
+  page            Int
+  cache_hit_count Int                 @default(0)
+  total_results   Int
+  total_pages     Int
+  created_at      DateTime            @default(now())
+  updated_at      DateTime            @updatedAt
+  last_fetched_at DateTime            @default(now())
+
+  @@id([term, page])
+}
+
+model MovieSearchResult {
+  id          Int         @id @default(autoincrement())
+  page        Int
+  search      MovieSearch @relation(fields: [search_term, page], references: [term, page])
+  search_term String
+  movie       Movie       @relation(fields: [movie_id], references: [id])
+  movie_id    Int
+  created_at  DateTime    @default(now())
+}
