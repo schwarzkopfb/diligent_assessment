@@ -82,7 +82,7 @@ export default function Pagination_({ page, total, onChange }: Props) {
   if (total < 2) return null;
 
   return (
-    <Container className="d-flex justify-content-center">
+    <Container className="d-flex justify-content-center mb-4">
       <Row className="mt-4">
         <Pagination>
           {total > 2 && (
