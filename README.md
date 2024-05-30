@@ -25,7 +25,7 @@ web framework with amazing performance and flexibility.
 
 The project is backed by PostgreSQL. Prisma ORM is chosen because of it's compatibility with AWS Aurora and the easy, reliable management of migrations as well as its superior development experience with Node.js.
 
-<img width="709" alt="Screen Shot 2024-05-30 at 12 40 34 PM" src="https://github.com/schwarzkopfb/diligent_assessment/assets/1900242/06562153-7835-4694-913a-ebfda9418a84">
+<img width="703" alt="Screen Shot 2024-05-30 at 12 53 17 PM" src="https://github.com/schwarzkopfb/diligent_assessment/assets/1900242/c02e2874-0181-4fac-b126-21f1bb1dec6e">
 
 ### Getting started
 
