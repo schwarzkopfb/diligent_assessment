@@ -10,6 +10,7 @@ CREATE TABLE "Movie" (
     "title" TEXT NOT NULL,
     "vote_average" DOUBLE PRECISION NOT NULL,
     "vote_count" INTEGER NOT NULL,
+    "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Movie_pkey" PRIMARY KEY ("id")
 );

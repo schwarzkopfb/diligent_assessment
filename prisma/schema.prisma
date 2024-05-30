@@ -19,6 +19,7 @@ model Movie {
   vote_average      Float
   vote_count        Int
   searches          MovieSearchToMovie[]
+  created_at        DateTime             @default(now())
 }
 
 model MovieSearch {
