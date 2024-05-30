@@ -29,18 +29,18 @@ CREATE TABLE "MovieSearch" (
 );
 
 -- CreateTable
-CREATE TABLE "MovieSearchResult" (
+CREATE TABLE "MovieSearchToMovie" (
     "id" SERIAL NOT NULL,
     "page" INTEGER NOT NULL,
     "search_term" TEXT NOT NULL,
     "movie_id" INTEGER NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT "MovieSearchResult_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "MovieSearchToMovie_pkey" PRIMARY KEY ("id")
 );
 
 -- AddForeignKey
-ALTER TABLE "MovieSearchResult" ADD CONSTRAINT "MovieSearchResult_search_term_page_fkey" FOREIGN KEY ("search_term", "page") REFERENCES "MovieSearch"("term", "page") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "MovieSearchToMovie" ADD CONSTRAINT "MovieSearchToMovie_search_term_page_fkey" FOREIGN KEY ("search_term", "page") REFERENCES "MovieSearch"("term", "page") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "MovieSearchResult" ADD CONSTRAINT "MovieSearchResult_movie_id_fkey" FOREIGN KEY ("movie_id") REFERENCES "Movie"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "MovieSearchToMovie" ADD CONSTRAINT "MovieSearchToMovie_movie_id_fkey" FOREIGN KEY ("movie_id") REFERENCES "Movie"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

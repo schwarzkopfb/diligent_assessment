@@ -104,7 +104,7 @@ class MoviesRoute extends Route {
         });
 
         // upsert the m-to-n relationship between search and movies
-        await db.movieSearchResult.createMany({
+        await db.movieSearchToMovie.createMany({
           data: movies.map(({ id }) => ({
             search_term: q,
             movie_id: id,
