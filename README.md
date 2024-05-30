@@ -11,8 +11,7 @@ Task description: https://github.com/dil-ajanek/tech_assessment/blob/main/README
 
 This repository consists of 3 main folders and some configuration and manifest files.
 
-- `prisma` dir contains the database schema and initial "migration" file for a PostgreSQL datastore - used by the backend. Prisma ORM is chosen because of it's compatibility with AWS Aurora and the easy, reliable
-  management of migrations as well as its superior development experience with Node.js.
+- `prisma` dir contains the database schema and initial "migration" `sql` file for a PostgreSQL datastore - used by the backend.
 - `public` is the classic "wwwroot", containing static assets served directly and a special `index.html` which is used as a template for the final client html.
 - in `src` there are two subdirectories: `client` and `server` containing the source files for the frontend
   and the backend respectively.
@@ -21,6 +20,12 @@ The client is based on `React` with `TypeScript`, `Bootstrap` and `Sass` for sty
 
 The server is also written in `TypeScript` on top of `Koa` because that's a quite powerful, light-weight
 web framework with amazing performance and flexibility.
+
+#### Database
+
+The project is backed by PostgreSQL. Prisma ORM is chosen because of it's compatibility with AWS Aurora and the easy, reliable management of migrations as well as its superior development experience with Node.js.
+
+<img width="709" alt="Screen Shot 2024-05-30 at 12 40 34 PM" src="https://github.com/schwarzkopfb/diligent_assessment/assets/1900242/06562153-7835-4694-913a-ebfda9418a84">
 
 ### Getting started
 
