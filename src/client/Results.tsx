@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
 import Stack from "react-bootstrap/Stack";
 import Movie from "./types/Movie";
-import { TMDB_IMAGE_BASE_URL } from "./consts";
+import { TMDB_IMAGE_BASE_URL, POSTER_PLACEHOLDER_URL } from "./consts";
 
 /**
  * Separate items into rows
@@ -70,8 +70,12 @@ export default function Results({ results }: Props) {
               >
                 <Card className="result-card">
                   <Image
-                    src={`${TMDB_IMAGE_BASE_URL}/${movie.poster_path}`}
-                    fallbackImage="/placeholder.svg"
+                    src={
+                      movie.poster_path
+                        ? `${TMDB_IMAGE_BASE_URL}/${movie.poster_path}`
+                        : POSTER_PLACEHOLDER_URL
+                    }
+                    fallbackImage={POSTER_PLACEHOLDER_URL}
                   />
                   <Card.Body>
                     <Stack direction="horizontal" gap={2} className="mb-2">
